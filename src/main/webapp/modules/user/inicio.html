@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <link href="css/main.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--CABECALHO -->
+<header class="menu-nav">
+    <nav>
+        <!--topo com o menu, logo, e perfil-->
+        <section class="topo">
+            <span class="menuButton"></span>
+            <h3>Inicio</h3>
+            <span class="config">
+            </span>
+        </section>
+
+        <!--menu-->
+        <menu>
+            <figure class="perfil">
+                <span class="foto-perfil">
+                    <img src="img/fotoPerfil.jpg">
+                </span>
+                <figcaption class="nome-perfil">Sara Lima</figcaption>
+                <a href="" class="editar">Editar</a>
+            </figure>
+            <ul>
+                <li><a>Início</a></li>
+                <li><a>Compras</a></li>
+                <li><a>Comentários</a></li>
+                <li><a>Qualificações</a></li>
+                <li><a>Perfil</a></li>
+                <li><a>Informacões</a></li>
+            </ul>
+
+            <a class="link only-link">logout</a>
+        </menu>
+    </nav>
+
+</header>
+<main>
+    <section class="banners">
+        <a href="#">
+            <img src="img/banner01.jpg" alt="Vestidos"/>
+        </a>
+        <a href="#">
+            <img src="img/banner02.jpg" alt="sapatos"/>
+        </a>
+        <a href="#">
+            <img src="img/banner03.jpg" alt="Vestidos"/>
+        </a>
+        <a href="#">
+            <img src="img/banner01.jpg" alt="Vestidos"/>
+        </a>
+        <a href="#">
+            <img src="img/banner02.jpg" alt="sapatos"/>
+        </a>
+    </section>
+    <nav>
+        <section class="sub-menu">
+            <a class="subCompras" href="">
+                <p>Compras</p>
+            </a>
+            <a class="subCompras" href="">
+                <p>Comentários</p>
+            </a>
+            <a class="subCompras" href="">
+                <p>Vendedores</p>
+            </a>
+        </section>
+    </nav>
+
+</main>
+
+<script>
+    /*evento que abre o menu*/
+    document.querySelector('.menuButton').addEventListener('click',function(){
+        this.closest('nav').querySelector('menu').classList.toggle('ativo');
+        this.classList.toggle('ativo');
+    });
+</script>
+</body>
+</html>

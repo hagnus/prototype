@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="shortcut icon" href="icons/favicon.png" type="icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link href="css/main.css" rel="stylesheet"/>
+    <title>Login - 4Fashion</title>
+</head>
+<body>
+     <!-- TOPO -->
+     <section data-section="modelo-bg">
+     </section>
+     <!-- FORMULÁRIO -->
+        <section data-section="Login">
+            <form class="formBasic formLogin">
+                <h1>Login</h1>
+                <label data-label="Email">
+                    <span class="icons email"></span>
+                    <input type="email" name="email" required/>
+                </label>
+                <label data-label="Senha">
+                    <span class="icons senha"></span>
+                    <input type="password" name="password" required/>
+                </label>
+                <a class="link-cinza">Esqueci a senha</a>
+                <a href="inicio.html">
+                    <input type="submit" value="Entrar"/>
+                </a>
+                <a class="link-cinza" href="cadastro.html">Não possui uma conta?<span class="link-underline">Cadastre-se</span></a>
+            </form>
+        </section>
+    <script>
+        /*script para animacao dos inputs*/
+        var labels=document.querySelectorAll('[data-label] input');
+        [].forEach.call(labels,function(label){
+            label.addEventListener('keyup', function () {
+                if(this.value.length != 0){
+                    this.closest('label').classList.add('invisible');
+                    /*this.closest('label').querySelector('.icons').classList.add('invisible');*/
+                }else{
+                    this.closest('label').classList.remove('invisible');
+                    /*this.closest('label').querySelector('.icons').classList.remove('invisible');*/
+                }
+
+            });
+        });
+
+
+        var outs=document.querySelectorAll('.out');
+        [].forEach.call(outs,function(out){
+            out.addEventListener('click',function(event){
+                var obj=this.closest('main')
+                obj.classList.add('out');
+
+                setTimeout(function(){ obj.classList.add('invisible');}, 100);
+                document.querySelector('[data-animation="invisible"]').classList.add('in');
+                document.querySelector('[data-animation="invisible"]').classList.add('visible');
+
+            });
+        });
+    </script>
+</body>
+</html>

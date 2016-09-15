@@ -1,0 +1,152 @@
+
+/*fonts*/
+
+@font-face {
+    font-family: 'tituloIndex';
+    src: url(fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+    font-family: 'corpo';
+    src: url(fonts/segoeui.ttf);
+}
+}@font-face {
+    font-family: 'corpoLeve';
+    src: url(fonts/segoeuil.ttf);
+}@font-face {
+    font-family: 'corpoBold';
+    src: url(fonts/seguisb.ttf);
+}
+
+body{font-family: 'corpo';}
+p,a{font-size: .9rem;text-decoration: none;}
+h1{color: #3f3f3f; font-weight: normal; font-size: 1.3rem;font-family: 'corpoBold'; margin-bottom: 1.5rem;}
+h3{ font-size: .9rem; text-align: center;}
+
+/*A N I M A C A O*/
+@-webkit-keyframes goingout {0%{transform: translateX(0);opacity: 1}100%{transform: translateX(-100%);opacity: 0}}
+@-moz-keyframes goingout {0%{transform: translateX(0);opacity: 1}100%{transform: translateX(-100%);opacity: 0}}
+@-ms-keyframes goingout {0%{transform: translateX(0);opacity: 1}100%{transform: translateX(-100%);opacity: 0}}
+@keyframes goingout {0%{transform: translateX(0);opacity: 1}100%{transform: translateX(-100%);opacity: 0}}
+@-webkit-keyframes in {0%{transform: translateX(100%);opacity:1}100%{transform: translateX(0);opacity:1}}
+@-moz-keyframes in {0%{transform: translateX(100%);opacity:1}100%{transform: translateX(0);opacity:1}}
+@-ms-keyframes in {0%{transform: translateX(100%);opacity:1}100%{transform: translateX(0);opacity:1}}
+@keyframes in {0%{transform: translateX(100%);opacity:1}100%{transform: translateX(0);opacity:1}}
+@-webkit-keyframes enter {0%{opacity: 0}100%{opacity: 1}}
+@-moz-keyframes enter {0%{opacity: 0}100%{opacity: 1}}
+@-ms-keyframes enter {0%{opacity: 0}100%{opacity: 1}}
+@keyframes enter {0%{opacity: 0}100%{opacity: 1}}
+
+main.out{animation: goingout .1s linear 1 forwards;}
+.out.invisible{display: none}
+[data-animation="invisible"] {display: none;float: left;position: absolute;right: 0;top: 0;}
+[data-animation="invisible"].in{animation: in .2s linear 1 forwards;float: none; opacity: 1}
+.in.visible{display: block; position: relative; top:inherit; right: inherit}
+
+/*fim de animacao*/
+
+/*C O M U N STYLE*/
+main,div,section,form,article,aside,ul,figure,menu,header,footer{opacity: 0;animation: enter .5s linear 1 forwards}
+[data-section]{padding: 1rem}
+.link {  display: table;  margin: .5rem auto;  font-size: 1rem;  line-height: 1.3rem;cursor: pointer}
+.editar{ border: 1px solid #cfcfcf; color: #1a1a1b; font-size: .9rem; padding: .5rem 1rem; border-radius: .2rem;display: table; margin: 1rem auto 0;}
+
+/*FORMULARIO DE LOGIN*/
+
+[data-section="modelo-bg"]{background:url("../img/modeloLogin.png") no-repeat center #e4e3e8; width: 100%; height: 260px; background-size: contain;}
+.link-cinza{color: #7e7e7e; font-size: .9rem; margin: .8rem 0;display: table;}
+.link-underline{ color: #1a1a1b; text-decoration: underline; padding-left:.4em}
+
+.formLogin {margin: 3rem auto;max-width: 340px; font-family: 'menu',sans-serif; width: 100% }
+.formLogin input,.button{    font-family: 'Caviar-bold', sans-serif;}
+.formLogin input:not([type="submit"]):not([type="submit"]):not(.button){padding:.8rem ; padding-left: 3rem; border-bottom: 1px solid #e1e1e1;}
+.formLogin input[type="submit"],.formSigin input[type="button"],.formSigin .button {width: 100%;padding: .8rem .7rem;background: #1a1a1b;border-radius: 4px; color: #fff; font-size: 1rem;}
+
+[data-label]::before{content:attr(data-label);display:block;  position: absolute; left: 45px; top: 8px; color: #727272; font-family: 'menu', sans-serif; letter-spacing: 1px; font-size: .86rem;padding: .2rem;}
+[data-label='Email']::before{content:attr(data-label)}
+.icons{ width: 30px;height: 20px;/* border: 1px solid red; */position: absolute;top: 9px;left: 0;background: url("../icons/sprite.png") no-repeat }
+.icons.invisible{display: none}
+[data-label].invisible::before{display: none}
+.icons.email{background-position:-48px -17px; }
+.icons.senha{  height: 28px;top: 4px;background-position: -8px -12px;}
+[data-label='Senha']::before{content:attr(data-label)}
+/*[data-icon]::before{top:10px}*/
+
+/* I N D E X*/
+.modelo{background: url(../img/modelo.png) center no-repeat; position: absolute; max-width: 578px; width: 100%; max-height: 585px; height: 100%; right: 3%; bottom: 0; z-index: -1;}
+.loginBox{ margin: 0 auto; bottom: 1rem; z-index: 4; margin-top: 3rem;text-align: center;}
+.sign{ display: inline-block; background-color: #fff; padding: 1rem; font-size: .8em; border-radius: .2em; width: 100%; text-align: center;margin: .3em; max-width: 300px; margin-bottom: 1rem;}
+.cadastro{display: inline-block;background-color: #1a1a1b; padding: 1rem; font-size: .8em; color: #fff;border-radius: .2em;width: 100%; text-align: center; margin: .3em;max-width: 300px;}
+.sign:hover, .cadastro:hover{ box-shadow: 0 6px 17px #b2b4b7;)}
+[data-section="principal"]{ max-width: 1200px; margin: 0 auto;}
+.logoBox{ position: absolute;  top: 50%;  margin-top: -115px;  z-index: 20; margin-left: 10%;}
+.formas{ position: absolute; right: 10%; bottom: 50px; z-index: -1;}
+.logo{ max-width: 400px;}
+.forma{ background: url("../img/formas.svg") no-repeat; center;max-width: 172px; max-height: 100px; width: 100%; height: 100%; position: absolute; bottom: 7%; left: -36px;}
+
+/*M E N U*/
+.topo{ position: relative; padding: 1.5rem 0; }
+.topo .logo {margin: 0 auto;padding: .5rem;max-width: 280px;}
+.menuButton{display: block;width: 46px;height: 40px;position: absolute;top: 50%;margin-top: -20px;margin-left: 1rem;overflow: hidden;background: url("../icons/sprite.png") no-repeat -85px -8px;cursor: pointer;transition: all .5s}
+.menuButton.ativo{right: 5%; z-index: 1;}
+menu,.menu {    position: absolute;top:0; left:0;width: 0;height: 100%; min-height:568px;background: #fff;z-index: 9;box-shadow: 0 0 21px -5px rgba(121, 121, 121, 0.69); font-family: 'Caviar-regular', sans-serif; display: none; transition: all .3s;overflow:hidden }
+@keyframes menuAtivo {
+    0%{width: 0; opacity: 1}
+    100%{width: 30%;opacity: 1}
+ }
+menu.ativo,.menu.ativo{display: block; animation:menuAtivo .1s .1s linear 1 forwards }
+menu li a,.menu li a {    position: relative;padding: .85rem .5rem;display:-webkit-flex;-webkit-align-items: center;display: flex;align-items: center;}
+menu li a::before,.menu li a::after{content: '';width: 26px;margin: 0 .3rem;right: 0;height: 20px;background: url("../icons/sprite.png") no-repeat -137px -15px;}
+menu ul,.menu ul{display: table; width: 100%}
+menu li:last-child,.menu li:last-child{border-bottom: none}
+header.menu-nav{z-index: 3; position: relative;}
+
+/* C O N F I G */
+.config{ background: url("../icons/sprite.png") -189px -49px  no-repeat; width: 23px; height: 23px;  position: absolute; right: 18px;top: 23px;}
+
+/* S U B M E N U */
+.sub-menu{ position: fixed; bottom: 0; width: 100%; text-align: center; padding: .6rem 0; border-top: 1px solid #cfcfcf; background: #fff;}
+.sub-menu a{ display: inline-block; margin:0 .9rem; color: #1a1a1b;}
+.sub-menu p::before{content: ''; background: url("../icons/sprite.png") -2px -48px no-repeat; width: 30px; height: 30px; display: block;    margin: 0 auto;}
+.sub-menu:nth-child(2){ background-position: 0;}
+
+/*P E R F I L - dentro do menu*/
+.perfil{ padding: 1rem; border-bottom: 1px solid #cfcfcf;}
+.foto-perfil{width: 100px;height: 100px;border-radius: 100%;overflow: hidden;display: flex;align-items: center;justify-content: center;margin: 0 auto;}
+.foto-perfil img{max-width: 100%}
+.nome-perfil{text-align: center; margin: .5rem auto; font-family: 'menu', sans-serif; }
+.link.only-link{    border-top: 1px solid #cfcfcf;  width: 100%;  text-align: center;  padding: .8rem 0;}
+.link.only-link:after{display: none}
+
+
+/* B A N N E R S */
+.banners{display: flex;align-items: center;  padding-bottom: 5rem;}
+.banners a{ margin:0 .4rem 1rem 0;}
+
+@media screen and (max-width: 950px) {
+.logo {margin: 2rem auto 0;max-width: 400px;}
+.modelo{background: url("../img/modeloMenor.png") center no-repeat; min-height: 69%; background-size: contain;position: absolute; bottom: 0; width:calc(100% - 1rem); margin-right: -176px; right: 50%; max-width: 363px; max-height: 537px;}
+[data-section="principal"] {background-color: #e4e3e8}
+.sign{ display: inline-block; background-color: #fff; padding: 1em; font-size: .8em; border-radius: .2em; width: 45%; text-align: center;margin: .3em;}
+.cadastro{display: inline-block;background-color: #1a1a1b; padding: 1em; font-size: .8em; color: #fff;border-radius: .2em;width: 45%; text-align: center; margin: .3em;}
+.logoBox{ position: inherit;margin: 0;}
+.loginBox{ left: 50%; max-width: 400px;width: calc(100% - 1rem);position: absolute; bottom: 1rem; z-index: 4;    margin-left: -200px;}
+.forma{ display: none;}
+[data-section="modelo-bg"]{ height: 200px;}
+}
+
+@media screen and (max-width: 700px) {
+    .formLogin {
+        margin: 1rem auto;
+    }
+    @keyframes menuAtivo {
+        0%{width: 0; opacity: 1}
+        100%{width: 75%;opacity: 1}
+    }
+    .banners{display: block;}
+}
+@media screen and (max-width: 450px) {
+.modelo { height: inherit; margin-right: -153px; }
+.loginBox{ margin-left: -8px;left: 5%; margin-top: 0;}
+.topo .logo{ max-width: 200px;}
+}

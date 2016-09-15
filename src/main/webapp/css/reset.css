@@ -1,0 +1,14 @@
+/*ALL ELEMENTS BASICS*/
+*{margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+outline: none}
+img{max-width: 100%}
+ul,ol,li{list-style: none}
+
+
+/*FORMS ELEMENTS*/
+label {margin: .5rem 0;display: block;position: relative    }
+input{border:none}
+input:not([type="submit"]):not([type="submit"]):not(.button){display: block; width: 100%; padding: .5rem}
