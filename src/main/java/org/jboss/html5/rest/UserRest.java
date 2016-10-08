@@ -35,7 +35,7 @@ public class UserRest {
     @Inject
     private UserService service;	
 
-    @GET
+    /*@GET
     @Path("/features")    
     @Produces( MediaType.APPLICATION_JSON)    
     public Response listAllWithFeatures() {
@@ -50,7 +50,7 @@ public class UserRest {
         }
         
     	return builder.build();    	
-    }
+    }*/
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)

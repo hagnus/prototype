@@ -15,7 +15,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "USERS_FEATURES")
+@Table(name = "user_feature")
 public class UserFeature implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

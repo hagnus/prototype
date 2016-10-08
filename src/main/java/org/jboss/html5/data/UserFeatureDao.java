@@ -7,11 +7,11 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import org.jboss.html5.data.base.GenericJpaDao;
+import org.jboss.html5.data.base.GenericDaoImpl;
 import org.jboss.html5.model.access.UserFeature;
 
 @Stateless
-public class UserFeatureDao extends GenericJpaDao<UserFeature, Long> {	
+public class UserFeatureDao extends GenericDaoImpl<UserFeature, Long> {	
 	public void deleteById(Long id) throws Exception {
 		// TODO Auto-generated method stub
 	}

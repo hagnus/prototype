@@ -5,7 +5,24 @@
         http://java.sun.com/xml/ns/persistence
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
    <persistence-unit name="primary" >        
-      <jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>              
+      <jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
+      <class>org.jboss.html5.model.Buyer</class>
+      <class>org.jboss.html5.model.Manufacturer</class>
+      <class>org.jboss.html5.model.Order</class>
+      <class>org.jboss.html5.model.OrderItem</class>
+      <class>org.jboss.html5.model.Payment</class>
+      <class>org.jboss.html5.model.Paymode</class>
+      <class>org.jboss.html5.model.Person</class>
+      <class>org.jboss.html5.model.Product</class>
+      <class>org.jboss.html5.model.ProductManufacturer</class>
+      <class>org.jboss.html5.model.ProductTag</class>
+      <class>org.jboss.html5.model.Tag</class>
+      <class>org.jboss.html5.model.Vendor</class>
+      <class>org.jboss.html5.model.VendorTag</class>
+      <class>org.jboss.html5.model.access.Feature</class>
+      <class>org.jboss.html5.model.access.User</class>
+      <class>org.jboss.html5.model.access.UserFeature</class>
+      <class>org.jboss.html5.model.base.BaseModel</class>              
       <properties>
          <!-- Properties for Hibernate -->
          <property name="hibernate.hbm2ddl.auto" value="update" />

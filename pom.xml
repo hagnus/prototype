@@ -34,7 +34,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
         <!-- You can reference property in pom.xml or filtered resources (must enable third-party plugin if using Maven < 2.1) -->
-        
         <!-- JBoss dependency versions -->
  
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
@@ -191,6 +190,11 @@
             <scope>test</scope>
         </dependency>
 
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.39</version>
+		</dependency>
     </dependencies>
 
     <build>

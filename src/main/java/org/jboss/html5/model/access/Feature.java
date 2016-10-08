@@ -2,7 +2,6 @@ package org.jboss.html5.model.access;
 
 import java.io.Serializable;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,11 +11,11 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "FEATURE")
+@Table(name = "feature")
 public class Feature implements Serializable {
-	private static final long serialVersionUID = 1L;
-    
-    @Id
+	private static final long serialVersionUID = -8591255043722449337L;
+
+	@Id
     @GeneratedValue
     @Column(name = "FEATURE_ID")	
 	private long id;

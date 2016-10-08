@@ -13,11 +13,11 @@ import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "USER", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "EMAIL"))
 public class User implements Serializable {
-	private static final long serialVersionUID = 1L;
-	
-    @Id
+	private static final long serialVersionUID = -9035979791040809493L;
+
+	@Id
     @GeneratedValue
     @Column(name = "USER_ID")	
 	private long id;

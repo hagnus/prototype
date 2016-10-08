@@ -8,12 +8,12 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import org.jboss.html5.data.base.GenericJpaDao;
+import org.jboss.html5.data.base.GenericDaoImpl;
 import org.jboss.html5.model.access.User;
 import org.jboss.html5.model.access.UserFeature;
 
 @Stateless
-public class UserDao extends GenericJpaDao<User, Long>{	  
+public class UserDao extends GenericDaoImpl<User, Long>{	  
 	
     public User findByEmail(String email) {   			
         try {
@@ -27,21 +27,7 @@ public class UserDao extends GenericJpaDao<User, Long>{
             em.close();
         }    	
     }
-
-	@Override
-	public void deleteById(Long id) throws Exception {
-		User entity = new User();
-		entity.setId(id);
-		
-	    try {
-	        em.getTransaction().begin();
-	        em.persist(entity);
-	        em.getTransaction().commit();
-	    } finally {
-	        em.close();
-	    }
-	}
-
+    
 	public List<User> getEagerListAll() {
 		List<User> users = new ArrayList<User>();
         users = getListAll();

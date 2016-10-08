@@ -11,7 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-public abstract class GenericJpaDao <T, ID extends Serializable> implements GenericDao<T, ID> {
+public abstract class GenericDaoImpl <T, ID extends Serializable> implements GenericDao<T, ID> {
     private final static String UNIT_NAME = "primary";
     
     @PersistenceContext(unitName = UNIT_NAME, type=PersistenceContextType.TRANSACTION)
@@ -56,6 +56,19 @@ public abstract class GenericJpaDao <T, ID extends Serializable> implements Gene
 	    }		
 	}
 
+	@Override
+	public void deleteById(ID id) throws Exception {
+		T entity = em.find(getPersistentClass(), id);
+		
+	    try {
+	        em.getTransaction().begin();
+	        em.remove(entity);
+	        em.getTransaction().commit();
+	    } finally {
+	        em.close();
+	    }
+	}	
+	
 	@Override
 	public T getById(ID id) {
         return em.find(getPersistentClass(), id);

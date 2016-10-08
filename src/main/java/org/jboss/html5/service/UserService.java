@@ -1,6 +1,5 @@
 package org.jboss.html5.service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +17,6 @@ import javax.validation.Validator;
 import org.jboss.html5.data.UserDao;
 import org.jboss.html5.data.UserFeatureDao;
 import org.jboss.html5.model.access.User;
-import org.jboss.html5.model.access.UserFeature;
 
 
 public class UserService {
@@ -42,7 +40,7 @@ public class UserService {
     	return userDao.getListAll();
     }    
     
-    public List<User> getAllWithFeatures() {
+    /*public List<User> getAllWithFeatures() {
 		List<User> users = new ArrayList<User>();
 		users = userDao.getListAll();
 		
@@ -55,7 +53,7 @@ public class UserService {
 			}
 		}
     	return users;
-    }     
+    } */
     
     public User getById(Long id) {
         return userDao.getById(id);
